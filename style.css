@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(26, 66%, 93%);
+}
+
+.container {
+    /* border: 2px solid green; */
+    max-width: 95%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.top {
+    /* border: 2px solid red ; */
+    padding: 2rem;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    background-color: hsl(10, 79%, 65%);
+    border-radius: 10px;
+}
+
+.top-content-div {
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid white; */
+    align-items: center;
+}
+
+
+.top-text-div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.top-text-div p {
+    font-size: 1.4rem;
+    color: hsla(28, 7%, 90%) ;
+}
+
+.top-text-div .total-balance {
+    font-size: 2rem;
+    color: hsl(26, 66%, 93%);
+}
+
+.top-circle-div {
+    display: flex;
+    /* border: 2px solid white; */
+    position: relative;
+} 
+
+
+.white-circle {
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-left: -2rem;
+}
+
+.black-circle {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: 2px solid black;
+    background-color: black;
+}
+
+.chart {
+    padding: 3rem;
+    background-color: white;
+    /* border: 2px solid #008000; */
+    border-radius: 20px;
+}
+
+.chart h2 {
+    font-size: 2.5rem;
+    color: hsl(25, 47%, 15%);
+    font-weight: 700;
+}
+
+.bar-chart-divs {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    padding-block: 3rem;
+    /* border: 2px solid red; */
+    border-bottom: 1px solid hsla(28, 10%, 53%, 0.2);
+    align-items: flex-end;
+    position: relative;
+}
+
+.bar-chart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+    position: relative;
+}
+
+.bar-chart p {
+    font-size: 1.4rem;
+    color: hsla(28, 10%, 53%, 0.6);
+}
+
+.bar {
+    width: 3rem;
+    height: 8rem;
+    background-color: hsl(10, 79%, 65%);
+    border-radius: 5px;
+}
+
+.bar:hover {
+    background-color: hsl(186, 34%, 65%);
+    cursor: pointer;
+}
+
+.monthly-total-div {
+    padding-block: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.monthly-total-div p {
+    font-size: 1.4rem;
+    color: hsla(28, 10%, 53%, 0.6);
+}
+
+#total-monthly {
+    font-size: 4rem;
+    color: hsl(25, 47%, 15%);
+    margin-top: 1rem;
+}
+
+#percent-last-month {
+    text-align: right;
+}
+
+#percentage {
+    color: hsl(25, 47%, 15%) ;
+}
+
+.amount {
+    padding: 5px;
+    background-color: hsl(25, 47%, 15%);
+    border: 1px solid white;
+    color: white;
+    border-radius: 5px;
+    position: absolute;
+    top: -40px;
+    display: none;   
+}
