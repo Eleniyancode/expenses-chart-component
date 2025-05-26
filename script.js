@@ -29,6 +29,13 @@ fetch("data.json")
     });
 
     // console.log(maxAmount);
+    
+    //getting the day of the week
+    const days = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
+    const today = new Date ();
+    const dayName = days[today.getDay()];
+    console.log(dayName);
+
 
     //displaying the bars base on the amount spend a day
     barCharts.forEach((bar, i) => {
@@ -36,11 +43,15 @@ fetch("data.json")
       //   console.log(height);
     //   console.log(maxAmount.amount);
       bar.style.height = `${height}px`;
-      if (height === Math.round(3 * maxAmount.amount)) {
+
+      console.log(maxAmount.day, dayName);
+
+      //highlighting the bar base on the current day
+      if (data[i].day === dayName) {
         bar.style.backgroundColor = "hsl(186, 34%, 65%)";
         // console.log(maxAmount.amount);
       }
-      
+
       //displaying the amount on top of the bar chart
       amountEls[i].textContent = `${formatcur(
         Number(data[i].amount),
